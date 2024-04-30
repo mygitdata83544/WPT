@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <div
+      style="
+        border: 2px solid;
+        display: flex;
+        justify-content: space-around;
+        padding-top: 50px;
+      "
+    >
+      <div>
+        <video width="320" height="240" controls>
+          <source src="sunbeam.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div>
+        <form method="get">
+          Name:
+          <input
+            type="text"
+            required
+            name="name"
+            placeholder="Enter name"
+          /><br />
+          <br />
+
+          Birthdate:
+          <input
+            type="date"
+            required
+            name="dob"
+            placeholder="dd//mm/yyyy"
+          /><br />
+          <br />
+
+          Email:
+          <input
+            type="email"
+            required
+            name="email"
+            placeholder="abc@gmail.com"
+          />
+          <br />
+          <br />
+
+          Password:
+          <input
+            type="password"
+            required
+            name="password"
+            placeholder="********"
+          />
+          <br />
+          <br />
+
+          Address:
+          <select name="State">
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Gujrat">Gujrat</option>
+            <option value="Assam">Assam</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+          </select>
+          <select name="District">
+            <option value="Mumbai City">Mumbai City</option>
+            <option value="Ahmedabad">Ahmedabad</option>
+            <option value="Jorhat">Jorhat</option>
+            <option value="Chennai">Chennai</option>
+          </select>
+          <select name="City">
+            <option value="Mumbai">Mumbai City</option>
+            <option value="Ahmedabad">Ahmedabad</option>
+            <option value="Nazira">Nazira</option>
+            <option value="Chennai">Chennai</option>
+          </select>
+          <br />
+          <br />
+          <!-- use x axis yaxis to align it properly -->
+          <div>State District City</div>
+          <div>
+            Gender <input type="radio" name="gender" value="Male" />Male
+            <input type="radio" name="gender" value="Male" />Female
+            <input type="radio" name="gender" value="Male" />Other
+          </div>
+          <div>
+            Upload photo <input type="file" placeholder="Browse your photo" />
+          </div>
+          <div>
+            Select your course:
+            <select name="course">
+              <option value="Select Course">Select Course</option>
+              <option value="PG-DAC">PG-DAC</option>
+              <option value="PG-DBDA">PG-DBDA</option>
+              <option value="PG-DITTIS">PG-DITTIS</option>
+              <option value="PG-AI">PG-AI</option>
+            </select>
+          </div>
+          <div>
+            <input type="submit" value="Register" />
+            <button>Clear</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
