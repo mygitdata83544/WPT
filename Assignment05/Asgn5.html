@@ -1,0 +1,85 @@
+<html>
+<head>
+    <title>cycle</title>
+</head>
+
+<body>
+     
+    <div style="    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 25px;
+    left: -12px;" id="car"> <img src="Car.png" alt="car not found"></div>
+    <div style="width: 900;
+    height: 60;
+    background-color: black;
+    margin-top: 177px;
+    margin-left: -8;
+"></div>
+   
+   <input type="button" value="move" id="b1" onclick="start()" style="height: 50; width: 70;">
+   <input type="button" value="Stop" id="b2" onclick="stop()" style="height: 50; width: 70;">
+    
+   <table>
+    <tr>
+      <td>X-axis</td>
+      <td>
+        <input type="text" id="text1">
+    </td>
+    </tr>
+    
+    <tr>
+        <td>Y-axis</td>
+    <td>
+    <input type="text" id="text2">
+    </td>
+    </tr>
+   </table>
+
+ <script>
+
+   var counter=0;
+   var ref=document.getElementById("car");
+   var x1=document.getElementById("text1");
+   var y1=document.getElementById("text2");
+   var topcounter=0;
+   var arr=new Array();
+  function start()
+  {
+    var n=window.setInterval(count,10);
+    arr.push(n);
+  }
+  function stop()
+  {
+    var p=arr.pop();
+    window.clearInterval(p);
+  }
+  function count()
+  {
+    if(counter<890)
+    {
+    counter=counter+1;
+    ref.style.marginLeft=counter+"px";
+    x1.value=counter;
+    y1.value=0;
+    }
+    else
+    {
+        ref.style.rotate="70deg";
+
+        if(topcounter<1300)
+        {        
+            topcounter=topcounter+1;
+            ref.style.marginTop=topcounter;
+            y1.value=topcounter;
+        }
+    }
+}
+
+
+  </script>
+
+
+</body>
+
+</html>
